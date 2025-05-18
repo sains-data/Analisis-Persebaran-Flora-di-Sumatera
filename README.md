@@ -37,4 +37,4 @@ Welcome to the Flora Distribution Analysis in Sumatra repository! 🌿 This proj
 
 
 ---
-## 📌 **Sample Use Case: **
+## 📌 ** Sample Use Case: **
