@@ -40,7 +40,6 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 -  Apache Spark
 -  Apache HBase
 -  Docker
--  Python (matplotlib, folium) untuk visualisasi data spasial.
 
 ---
 ## ⚙️ **System Components & Tech Stack**
@@ -55,7 +54,15 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 
 ---
 ## 🔄 **Workflow DAG (Airflow)**
-
+```plaintext
+dag_flora_distribution_pipeline:
+├── task_1: fetch_flora_data_from_GBIF
+├── task_2: load_raw_data_to_HDFS (Bronze Layer)
+├── task_3: run_spark_cleaning (Silver Layer)
+├── task_4: aggregate_data_and_cluster_analysis (Gold Layer)
+├── task_5: register_hive_tables_and_refresh_metadata
+├── task_6: update_visualizations_on_superset_dashboard
+└── task_7: notify_team_on_completion
 
 ---
 ## 🗂️ **Folder Structure**
@@ -76,9 +83,31 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 └── LICENSE
 
 ---
-## 🚀 **How to Run the Project (Deployment)**
+## 🚀 **Setup & Deployment**
+### **1. Prerequisites**
+- Docker + WSL2 (Windows) / Docker Desktop (macOS/Linux)
+- Python 3.8+ (for data ingestion scripts)
 
-
+### **2. Run the Hadoop-Spark Cluster**
+```bash
+git clone https://github.com/sains-data/Analisis-Persebaran-Flora-di-Sumatera.git
+cd Analisis-Persebaran-Flora-di-Sumatera
+docker-compose up -d  # Launches Hadoop, Spark, Hive, and HBase
 
 ---
 ## 📌 **Sample Use Case:**
+### Scenario: Identifying Conservation Hotspots of Endangered Flora in Sumatra
+
+**Problem:**  
+Conservation agencies need to understand which regions in Sumatra have high concentrations of endangered flora to allocate protection efforts.
+
+**Approach:**
+1. Load biodiversity data from GBIF into HDFS (**Bronze Layer**).
+2. Clean and normalize records via Apache Spark (**Silver Layer**), filtering valid observations with IUCN conservation status.
+3. Use **Spark MLlib** to perform **K-Means clustering** based on geolocation data.
+4. Store clustered results in **Apache HBase** and register them in **Hive** for fast querying.
+5. Visualize analysis results.
+
+**Outcome:**
+- Authorities identify **Central and Northern Sumatra** as high-risk zones.
+- Visual dashboards and spatial insights support **funding allocation** and **real-time conservation planning**.
