@@ -52,6 +52,7 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 
 ---
 ## 🗂️ **Folder Structure**
+```plaintext
 📦 Analisis-Persebaran-Flora-di-Sumatera
 ├── data/
 │   └── flora_sumatera.csv
