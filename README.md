@@ -23,6 +23,14 @@ Welcome to the Flora Distribution Analysis in Sumatra repository! 🌿 This proj
 
 ---
 ## 📖 **Project Overview**
+This project is an end-to-end implementation of a Big Data–based spatial analytics system designed to understand and map the distribution patterns of flora in the Sumatra region. The project is developed using the **Waterfall methodology**, which provides a systematic, measurable, and well documented process structure. Each phase is executed sequentially and thoroughly from planning, data collection and storage, transformation, and spatial analysis, to the final presentation of results in the form of informative visualizations.
+
+💡 **Key System Components:**
+- **Data Lake Design**: Implements the Medallion Architecture (Bronze → Silver → Gold) to organize data based on processing stages. Raw data from external sources is ingested into the Bronze layer, transformed data is moved to the Silver layer, and analysis-ready data is stored in the Gold layer.
+- **Data Source & Initial Storage**: The primary dataset is obtained from GBIF (Global Biodiversity Information Facility), consisting of flora records from Sumatra including species names, observation locations (GPS coordinates), observation times, and additional ecological attributes. Raw data is loaded into the Hadoop Distributed File System (HDFS) as the Bronze layer to ensure distributed and fault-tolerant storage.
+- **Data Transformation & Cleaning**: Using MapReduce and Apache Hive, the data is processed in the Silver layer. This process includes removing duplicates and null values, validating spatial data, and enriching the dataset with additional ecological attributes to prepare it for further analysis.
+- **Structured Storage**: After the transformation stage, the data is stored in HBase as a structured storage layer in the Gold stage. This enables fast access for advanced analysis and supports large-scale spatial queries.
+- **Spatial Analysis**: The processed data is used to identify flora distribution patterns, analyze their correlation with topography and administrative zones, and detect biodiversity hotspots across Sumatra.
 
 
 ---
