@@ -55,6 +55,7 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 
 ---
 ## 🔄 **Workflow DAG (Airflow)**
+
 ```plaintext
 dag_flora_distribution_pipeline:
 ├── task_1: fetch_flora_data_from_GBIF
@@ -64,9 +65,12 @@ dag_flora_distribution_pipeline:
 ├── task_5: register_hive_tables_and_refresh_metadata
 ├── task_6: update_visualizations_on_superset_dashboard
 └── task_7: notify_team_on_completion
+```
 
 ---
+
 ## 🗂️ **Folder Structure**
+
 ```text
 Analisis-Persebaran-Flora-di-Sumatera
 ├── data/
@@ -82,6 +86,7 @@ Analisis-Persebaran-Flora-di-Sumatera
 ├── docker-compose.yml
 ├── README.md
 └── LICENSE
+```
 
 ---
 
