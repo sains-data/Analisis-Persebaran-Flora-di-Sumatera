@@ -68,8 +68,8 @@ dag_flora_distribution_pipeline:
 
 ---
 ## 🗂️ **Folder Structure**
-```plaintext
-📦 Analisis-Persebaran-Flora-di-Sumatera
+```text
+Analisis-Persebaran-Flora-di-Sumatera
 ├── data/
 │   └── flora_sumatera.csv
 ├── hdfs/
