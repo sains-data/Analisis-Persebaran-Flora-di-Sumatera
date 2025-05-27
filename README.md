@@ -52,6 +52,7 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 | **Docker**        | Containerized cluster deployment |
 | **Apache Superset** | Dashboard for visualizing flora distribution |
 
+
 ---
 ## 🔄 **Workflow DAG (Airflow)**
 ```plaintext
@@ -63,6 +64,7 @@ dag_flora_distribution_pipeline:
 ├── task_5: register_hive_tables_and_refresh_metadata
 ├── task_6: update_visualizations_on_superset_dashboard
 └── task_7: notify_team_on_completion
+
 
 ---
 ## 🗂️ **Folder Structure**
@@ -82,6 +84,7 @@ dag_flora_distribution_pipeline:
 ├── README.md
 └── LICENSE
 
+
 ---
 ## 🚀 **Setup & Deployment**
 ### **1. Prerequisites**
@@ -93,6 +96,7 @@ dag_flora_distribution_pipeline:
 git clone https://github.com/sains-data/Analisis-Persebaran-Flora-di-Sumatera.git
 cd Analisis-Persebaran-Flora-di-Sumatera
 docker-compose up -d  # Launches Hadoop, Spark, Hive, and HBase
+
 
 ---
 ## 📌 **Sample Use Case:**
