@@ -65,9 +65,8 @@ dag_flora_distribution_pipeline:
 ├── task_6: update_visualizations_on_superset_dashboard
 └── task_7: notify_team_on_completion
 
-
-## 🗂️ **Folder Structure**
-
+---
+## 🗂️ Folder Structure
 ```text
 Analisis-Persebaran-Flora-di-Sumatera
 ├── data/
@@ -83,6 +82,7 @@ Analisis-Persebaran-Flora-di-Sumatera
 ├── docker-compose.yml
 ├── README.md
 └── LICENSE
+
 ```
 
 ---
