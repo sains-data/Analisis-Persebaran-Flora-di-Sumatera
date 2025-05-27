@@ -66,8 +66,8 @@ dag_flora_distribution_pipeline:
 └── task_7: notify_team_on_completion
 
 
----
 ## 🗂️ **Folder Structure**
+
 ```text
 Analisis-Persebaran-Flora-di-Sumatera
 ├── data/
@@ -83,35 +83,43 @@ Analisis-Persebaran-Flora-di-Sumatera
 ├── docker-compose.yml
 ├── README.md
 └── LICENSE
-
+```
 
 ---
-## 🚀 **Setup & Deployment**
-### **1. Prerequisites**
-- Docker + WSL2 (Windows) / Docker Desktop (macOS/Linux)
-- Python 3.8+ (for data ingestion scripts)
 
-### **2. Run the Hadoop-Spark Cluster**
+## 🚀 **Setup & Deployment**
+
+### 1. Prerequisites
+
+- Docker + WSL2 (Windows) / Docker Desktop (macOS/Linux)  
+- Python 3.8+ (for data ingestion scripts)  
+
+### 2. Run the Hadoop-Spark Cluster
+
 ```bash
 git clone https://github.com/sains-data/Analisis-Persebaran-Flora-di-Sumatera.git
 cd Analisis-Persebaran-Flora-di-Sumatera
 docker-compose up -d  # Launches Hadoop, Spark, Hive, and HBase
-
+```
 
 ---
+
 ## 📌 **Sample Use Case:**
+
 ### Scenario: Identifying Conservation Hotspots of Endangered Flora in Sumatra
 
 **Problem:**  
 Conservation agencies need to understand which regions in Sumatra have high concentrations of endangered flora to allocate protection efforts.
 
 **Approach:**
-1. Load biodiversity data from GBIF into HDFS (**Bronze Layer**).
-2. Clean and normalize records via Apache Spark (**Silver Layer**), filtering valid observations with IUCN conservation status.
-3. Use **Spark MLlib** to perform **K-Means clustering** based on geolocation data.
-4. Store clustered results in **Apache HBase** and register them in **Hive** for fast querying.
+
+1. Load biodiversity data from GBIF into HDFS (**Bronze Layer**).  
+2. Clean and normalize records via Apache Spark (**Silver Layer**), filtering valid observations with IUCN conservation status.  
+3. Use **Spark MLlib** to perform **K-Means clustering** based on geolocation data.  
+4. Store clustered results in **Apache HBase** and register them in **Hive** for fast querying.  
 5. Visualize analysis results.
 
 **Outcome:**
-- Authorities identify **Central and Northern Sumatra** as high-risk zones.
+
+- Authorities identify **Central and Northern Sumatra** as high-risk zones.  
 - Visual dashboards and spatial insights support **funding allocation** and **real-time conservation planning**.
