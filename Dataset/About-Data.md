@@ -38,9 +38,20 @@ The data retrieved includes numerous fields, but for analysis purposes, one key 
 | `gbif_LC.csv` | Species records classified as Least Concern (LC) — species dengan risiko konservasi rendah di Indonesia |
 | `gbif_EN.csv` | Species records classified as Endangered (EN) — species yang terancam punah di Indonesia |
 
-## 📋 Atribut dan Deskripsi Dataset
+## 📊 Data Dimensions
 
-| Atribut               | Deskripsi Atribut                                                                                     |
+- **gbif_NE.csv**  
+  Dimensions: (7663, 74) — 7,663 rows and 74 columns
+
+- **gbif_LC.csv**  
+  Dimensions: (5302, 74) — 5,302 rows and 74 columns
+
+- **gbif_EN.csv**  
+  Dimensions: (95, 74) — 95 rows and 74 columns
+
+## 📋 Dataset Attributes and Descriptions
+
+| Attributes            | Dataset Descriptions                                                                                   |
 |-----------------------|-----------------------------------------------------------------------------------------------------|
 | key                   | ID unik untuk setiap catatan kejadian (occurrence) di GBIF                                          |
 | datasetKey            | ID unik dari dataset sumber dalam GBIF                                                              |
