@@ -39,6 +39,8 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 -  Apache Hive
 -  Apache Spark
 -  Apache HBase
+-  Docker
+-  Python (matplotlib, folium) untuk visualisasi data spasial.
 
 ---
 ## ⚙️ **System Components & Tech Stack**
@@ -50,7 +52,20 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 
 ---
 ## 🗂️ **Folder Structure**
-
+📦 Analisis-Persebaran-Flora-di-Sumatera
+├── data/
+│   └── flora_sumatera.csv
+├── hdfs/
+│   └── core-site.xml
+├── hive/
+│   └── create_tables.hql
+├── spark/
+│   └── transform_flora.py
+├── hbase/
+│   └── hbase_commands.txt
+├── docker-compose.yml
+├── README.md
+└── LICENSE
 
 ---
 ## 🚀 **How to Run the Project (Deployment)**
