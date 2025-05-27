@@ -44,7 +44,14 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 
 ---
 ## ⚙️ **System Components & Tech Stack**
-
+| Component         | Role                          |
+|-------------------|-------------------------------|
+| **Hadoop HDFS**   | Distributed storage for raw data (Bronze Layer) |
+| **Apache Spark**  | Data cleaning, transformation, and aggregation (Silver → Gold Layer) |
+| **Apache Hive**   | SQL-based querying and metadata management |
+| **Apache HBase**  | NoSQL storage for processed data (Gold Layer) |
+| **Docker**        | Containerized cluster deployment |
+| **Apache Superset** | Dashboard for visualizing flora distribution |
 
 ---
 ## 🔄 **Workflow DAG (Airflow)**
