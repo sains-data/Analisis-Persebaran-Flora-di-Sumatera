@@ -41,10 +41,10 @@ The data retrieved includes numerous fields, but for analysis purposes, one key 
 ## 📊 Data Dimensions
 
 - **gbif_NE.csv**  
-  Dimensions: (7663, 74) — 7,663 rows and 74 columns
+  Dimensions: (7663, 74) — 7663 rows and 74 columns
 
 - **gbif_LC.csv**  
-  Dimensions: (5302, 74) — 5,302 rows and 74 columns
+  Dimensions: (5302, 74) — 5302 rows and 74 columns
 
 - **gbif_EN.csv**  
   Dimensions: (95, 74) — 95 rows and 74 columns
