@@ -1,3 +1,9 @@
+![Platform](https://img.shields.io/badge/Platform-Hadoop-brightgreen)
+![Tool](https://img.shields.io/badge/Tool-Apache%20Hive-yellow)
+![Processing](https://img.shields.io/badge/Processing-Spark-orange)
+![Visualization](https://img.shields.io/badge/BI-Power%20BI-blue)
+![Status](https://img.shields.io/badge/Status-Final%20Project-success)
+
 # 📊Analysis of Flora Distribution in Sumatra Through Data Lake System Using Descriptive Spatial Analysis Based on Hadoop and Apache Spark
 Welcome to the Flora Distribution Analysis in Sumatra repository! 🌿 This project presents a comprehensive approach to analyzing flora species distribution across the island of Sumatra using Data Lake systems and descriptive spatial analysis techniques. Built on Hadoop and Apache Spark infrastructure, this project demonstrates large-scale geographic data processing to generate actionable ecological insights. Designed as a portfolio project, this repository showcases the implementation of best practices in geospatial data analysis, biodiversity conservation, and distributed data processing.
 
