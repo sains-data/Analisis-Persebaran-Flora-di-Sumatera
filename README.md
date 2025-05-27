@@ -35,7 +35,10 @@ This project is an end-to-end implementation of a Big Data–based spatial analy
 
 ---
 ## 🛠 **Key Focus Areas**
-
+-  Hadoop Distributed File System (HDFS)
+-  Apache Hive
+-  Apache Spark
+-  Apache HBase
 
 ---
 ## ⚙️ **System Components & Tech Stack**
