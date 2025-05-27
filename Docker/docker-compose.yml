@@ -1,0 +1,93 @@
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
+    container_name: flora_sumatera-namenode
+    ports:
+      - "9000:9000"
+      - "9870:9870"
+      - "8020:8020"
+    volumes:
+      - ./hadoop-conf/core-site.xml:/opt/hadoop-2.7.4/etc/hadoop/core-site.xml
+      - ./hadoop-conf/hdfs-site.xml:/opt/hadoop-2.7.4/etc/hadoop/hdfs-site.xml
+      - namenode-data:/hadoop/dfs/name
+    environment:
+      - CLUSTER_NAME=flora_sumatera
+    networks:
+      - hadoop-net
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
+    container_name: flora_sumatera-datanode
+    ports:
+      - "9864:9864"
+      - "50075:50075"
+    volumes:
+      - ./hadoop-conf/core-site.xml:/opt/hadoop-2.7.4/etc/hadoop/core-site.xml
+      - ./hadoop-conf/hdfs-site.xml:/opt/hadoop-2.7.4/etc/hadoop/hdfs-site.xml
+      - datanode-data:/hadoop/dfs/data
+    depends_on:
+      - namenode
+    networks:
+      - hadoop-net
+
+  hive-metastore-db:
+    image: postgres:13
+    container_name: flora_sumatera-hive-metastore-db
+    environment:
+      POSTGRES_DB: metastore
+      POSTGRES_USER: hive
+      POSTGRES_PASSWORD: hive
+    ports:
+      - "5432:5432"
+    networks:
+      - hadoop-net
+
+  hive-metastore:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: flora_sumatera-hive-metastore
+    environment:
+      - HIVE_METASTORE_DB_TYPE=postgres
+      - HIVE_METASTORE_URI=thrift://flora_sumatera-hive-metastore:9083
+      - POSTGRES_HOST=flora_sumatera-hive-metastore-db
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=metastore
+      - POSTGRES_USER=hive
+      - POSTGRES_PASSWORD=hive
+      - HADOOP_CONF_DIR=/opt/hadoop-2.7.4/etc/hadoop
+      - CORE_CONF_fs_defaultFS=hdfs://flora_sumatera-namenode:8020
+    volumes:
+      - ./hadoop-conf/core-site.xml:/opt/hadoop-2.7.4/etc/hadoop/core-site.xml
+      - ./hadoop-conf/hdfs-site.xml:/opt/hadoop-2.7.4/etc/hadoop/hdfs-site.xml
+    depends_on:
+      - hive-metastore-db
+      - namenode
+    ports:
+      - "9083:9083"
+    networks:
+      - hadoop-net
+
+  hive-server:
+    image: bde2020/hive
+    container_name: flora_sumatera-hive-server-1
+    ports:
+      - "10000:10000"
+    volumes:
+      - ./hadoop-conf/core-site.xml:/opt/hadoop-2.7.4/etc/hadoop/core-site.xml
+      - ./hadoop-conf/hive-site.xml:/opt/hive/conf/hive-site.xml   # <<-- tambahkan ini
+    environment:
+      - HIVE_METASTORE_URI=thrift://flora_sumatera-hive-metastore:9083
+      - CORE_CONF_fs_defaultFS=hdfs://flora_sumatera-namenode:8020
+    depends_on:
+      - namenode
+      - datanode
+      - hive-metastore
+    networks:
+      - hadoop-net
+
+volumes:
+  namenode-data:
+  datanode-data:
+
+networks:
+  hadoop-net:
+    driver: bridge
