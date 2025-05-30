@@ -132,7 +132,7 @@ Conservation agencies need to understand which regions in Sumatra have high conc
 
 The following image illustrates the spatial distribution of flora species across Sumatra, highlighting regions with rich biodiversity and potential conservation hotspots.
 
-![Flora Distribution Visualization](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+![Flora Distribution Visualization](https://drive.google.com/uc?id=YOUR_IMAGE_IDhttps://drive.google.com/drive/folders/1kB2B12KHC1CmmlQyTlOXPQ2GlKb5atEJ?usp=sharing)
 
 Here's a paragraph in English that explains the distribution of flora in Sumatra based on NE, LC, and EN categories, including what each status means:
 
