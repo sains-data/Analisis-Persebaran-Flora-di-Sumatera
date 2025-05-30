@@ -134,8 +134,6 @@ The following image illustrates the spatial distribution of flora species across
 
 ![Flora Distribution Visualization](https://drive.google.com/uc?id=1puxdb-NQAI78VcRw2lPSV7u4MxGlA_OQ)
 
-Here's a paragraph in English that explains the distribution of flora in Sumatra based on NE, LC, and EN categories, including what each status means:
-
 The distribution of flora in Sumatra is mapped based on IUCN conservation categories: **NE (Not Evaluated)**, **LC (Least Concern)**, and **EN (Endangered)**. Species marked as NE are those that have not yet been assessed for their conservation status, indicating a potential gap in biodiversity research. LC species are considered widespread and abundant, facing no significant threats at present. In contrast, EN species are at a high risk of extinction in the wild and require urgent conservation efforts. The visualization reveals a high concentration of NE and LC species in the western part of Sumatra, particularly in West and North Sumatra provinces, while EN species are more sparsely distributed but appear in various regions such as Jambi, Bengkulu, and Lampung. This pattern underscores the ecological richness of Sumatra and the importance of monitoring both under-researched and threatened species.
 
 **Outcome:**
